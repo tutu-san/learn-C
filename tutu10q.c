@@ -13,3 +13,5 @@ int main(void){
     printf("Your point is %d .\n", point);
     return 0;
 }
+
+//Which is better, issue or problem ?
