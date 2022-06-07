@@ -9,8 +9,7 @@ int main(void){
         
         scanf("%d", &point);
         
-        
-        printf("Your point is %d .\n", point);
     }while( point < 0 || point > 100);
+    printf("Your point is %d .\n", point);
     return 0;
 }
