@@ -10,21 +10,19 @@ int main(void){
     
     gorin = keisan(year);
 
-    if( gorin == 1){
-        printf("%d年は夏季五輪の開催年です。", year);
-        return 0;
-    }else if( gorin == 2){
-        printf("%d年は冬季五輪の開催年です。", year);
-        return 0;
-    }else if( gorin == 0){
-        printf("%d年は五輪の開催年ではないです。", year);
-        return 0;
-    }else{
-        printf("どうしてこうなったのですか？");
-        return 0;
+    switch(gorin){
+        case 0:
+            printf("%d年は、五輪の開催年ではないです。\n",year);
+        break;
+        case 1:
+            printf("%d年は、夏季五輪の開催年です。\n",year);
+        break;
+        case 2:
+            printf("%d年は、冬季五輪の開催年です。\n",year);
+        break;
     }
 
-    
+    return 0;
 }
 
 int keisan(int year){
