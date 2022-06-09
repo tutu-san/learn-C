@@ -3,10 +3,12 @@
 int keisan(int);
 
 int main(void){
-    
+
+    int year,gorin;
+
     scanf("%d", &year);
     
-    keisan(year);
+    gorin = keisan(year);
 
     if( gorin == 1){
         printf("%d年は夏季五輪の開催年です。", year);
@@ -26,14 +28,12 @@ int main(void){
 }
 
 int keisan(int year){
-    int gorin = 0;
+    
     if( year % 4 == 0){
-        gorin = 1;
+        return 1;
     }else if( year % 2 == 0){
-        gorin = 2;
-    }else{
-        gorin = 0;
+        return 2;
     }
 
-    return gorin;
+    return 0;
 }
