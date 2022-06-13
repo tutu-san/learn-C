@@ -3,6 +3,7 @@
 int countfunc(void);
 
 int main(void){
+    int count = 0;
     countfunc();
     countfunc();
     countfunc();
