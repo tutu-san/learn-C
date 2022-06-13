@@ -10,7 +10,7 @@ int main(void){
     {
         int value1;
         value1 = 30;
-        value2 = 40;
+        //value2 = 40;  //あえて、ここをコメントアウトする。上の関数のメモリがここまで来るのか？
         printf(" 2:value1 %d\n", value1);
         printf(" 2:value2 %d\n", value2);
     }
