@@ -10,7 +10,7 @@ int main(void){
 }
 
 int countfunc(void){
-    int count = 0; //‰Šú‰»
+    int count; //‰Šú‰»‚µ‚È‚¢B
     count ++;
     printf("%d\n",count);
     return count;
