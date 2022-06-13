@@ -6,6 +6,7 @@ int countfunc(void);
 
 int main(void){
     countfunc();
+    count = 10; //“Ë‘R•ÏX‚µ‚½B
     countfunc();
     countfunc();
     return 0;
