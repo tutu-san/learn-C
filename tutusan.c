@@ -2,14 +2,13 @@
 
 int main(void)
 {
-    int array[10] = { 42, 79, 13 };
+    int array[] = { 42, 79, 13, 75, 19};
+    int i;
 
-    printf(" array[0] = %d\n", array[0]);
-    printf(" array[1] = %d\n", array[1]);
-    printf(" array[2] = %d\n", array[2]);
-    printf(" array[3] = %d\n", array[3]);
-    printf(" array[4] = %d\n", array[4]);
+    for( i = 0; i < 5; i++)
+    {
+        printf("array[%d] = %d\n", i ,array[i]);
+    }
 
     return 0;
-
 }
