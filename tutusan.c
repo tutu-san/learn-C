@@ -2,12 +2,14 @@
 
 int main(void)
 {
-    int array[100];
+    int array[10] = { 42, 79, 13 };
 
-    array[9] = 100;//0”Ô–Ú‚©‚ç‚È‚Ì‚ÅA9‚ª10”Ô–Ú‚¾‚ËB
-    printf("1:%d\n", array[9]);
-    array[9]++;
-    printf("2:%d\n", array[9]);
+    printf(" array[0] = %d\n", array[0]);
+    printf(" array[1] = %d\n", array[1]);
+    printf(" array[2] = %d\n", array[2]);
+    printf(" array[3] = %d\n", array[3]);
+    printf(" array[4] = %d\n", array[4]);
 
     return 0;
+
 }
