@@ -1,23 +1,20 @@
 #include <stdio.h>
 
-int count; //グローバルな変数
-
 int countfunc(void);
 
 int main(void){
-    
-    int count; //ここで、ローカル関数として宣言。
-    
-    countfunc();
-    count = 10; //突然変更した。
+
     countfunc();
     countfunc();
-    printf(" main : count = %d\n ", count);
+    countfunc();
     return 0;
 }
 
 int countfunc(void){
-    count++; //グローバル関数のおかげで、宣言なしでいける？
+    static int count; //静的なローカル変数
+
+    count++;
     printf("%d\n", count);
+
     return count;
 }
