@@ -1,20 +1,13 @@
 #include <stdio.h>
 
-int countfunc(void);
+int main(void)
+{
+    int array[100];
 
-int main(void){
+    array[9] = 100;//0番目からなので、9が10番目だね。
+    printf("1:%d\n", array[9]);
+    array[9]++;
+    printf("2:%d\n", array[9]);
 
-    countfunc();
-    countfunc();
-    countfunc();
     return 0;
-}
-
-int countfunc(void){
-    static int count; //静的なローカル変数
-
-    count++;
-    printf("%d\n", count);
-
-    return count;
 }
