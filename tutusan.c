@@ -1,17 +1,17 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void){
-    char c = 'A'; //”Žš‚ª“ü‚é 
+    char c = 'A';
     int suuti;
 
-    if ( c >= '0' && c <= '9' ){
-        //”»’è‚·‚é•”•ª
-        suuti = c - '0'; //”’l‚É•Ï‚¦‚é
+    if ( isdigit(c) ){
+        //”»’è•”•ª
+        suuti = c - '0';
     }else{
-        suuti = 0; //”Žš‚¶‚á‚È‚©‚Á‚½‚Ì‚ÅA0‚ð‘ã“ü
+        suuti = 0;
     }
 
     printf("%d\n", suuti);
-    
     return 0;
 }
