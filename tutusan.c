@@ -1,17 +1,7 @@
 #include <stdio.h>
-#include <ctype.h>
 
 int main(void){
-    char c = 'A';
-    int suuti;
-
-    if ( isdigit(c) ){
-        //”»’è•”•ª
-        suuti = c - '0';
-    }else{
-        suuti = 0;
-    }
-
-    printf("%d\n", suuti);
+    char str[6] = { 'M', 'A', 'R', 'I', 'O', '\0' };
+    printf("%s\n", str);
     return 0;
 }
