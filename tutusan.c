@@ -1,8 +1,17 @@
 #include <stdio.h>
 
 int main(void){
-    char c = '8'; //この8は数字として認識。
-    int suuti = c - '0'; //この時、数値に変換される。 //0は、48番。
+    char c = 'A'; //数字が入る 
+    int suuti;
+
+    if ( c >= '0' && c <= '9' ){
+        //判定する部分
+        suuti = c - '0'; //数値に変える
+    }else{
+        suuti = 0; //数字じゃなかったので、0を代入
+    }
+
     printf("%d\n", suuti);
+    
     return 0;
 }
