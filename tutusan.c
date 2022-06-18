@@ -2,7 +2,13 @@
 
 int main(void){
 
-    char str[] = "MARIO";
+    char str[6];
+    str[0] = 'M';
+    str[1] = 'A';
+    str[2] = 'R';
+    str[3] = 'I';
+    str[4] = 'O';
+    str[5] = '\0';
     printf("%s\n", str);
     return 0;
 }
