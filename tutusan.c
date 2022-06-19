@@ -1,14 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void){
-
-    char str[6];
-    str[0] = 'M';
-    str[1] = 'A';
-    str[2] = 'R';
-    str[3] = 'I';
-    str[4] = 'O';
-    str[5] = '\0';
-    printf("%s\n", str);
+    char str[] = "145";
+    int suuti = atoi(str);
+    printf("%d\n", suuti);
     return 0;
 }
