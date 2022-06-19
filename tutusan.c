@@ -1,10 +1,7 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(void){
-    char str1[] = "MARIO", str2[10];
-    strncpy(str2, str1 , 3);
-    str2[3] = '\0'; //EOS‚ð’Ç‰Á
-    printf("%s\n", str2); 
+    char str[] = "DRAGON""QUEST";
+    printf("%s\n", str);
     return 0;
 }
