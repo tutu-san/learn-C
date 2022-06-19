@@ -2,8 +2,9 @@
 #include <string.h>
 
 int main(void){
-    char str[10];
-    strcpy(str, "MARIO");
-    printf("%s\n", str);
+    char str1[] = "MARIO", str2[10];
+    strncpy(str2, str1 , 3);
+    str2[3] = '\0'; //EOS‚ð’Ç‰Á
+    printf("%s\n", str2); 
     return 0;
 }
