@@ -13,8 +13,8 @@ int main(void){
         scanf("%d", &d);
 
         for ( i = 1; i < d; i++ ){
-            b = a + b;
-            a = b - a;
+            b = a + b; // A + B で、答えを出そう。
+            a = b - a; // Aに B - Aをして、前回のBをAに代入する。 
         }
     
         printf("%d\n", b);
