@@ -5,10 +5,10 @@ int end(void); //終了するか聞く関数のプロトタイプ宣言
 
 int main(void){
 
-    int z;
+    int z; //do-whileから抜けるための変数
     do{
     fibo(); //計算関数呼び出し
-    z = end(); //終了関数呼び出し
+    z = end(); //終了関数呼び出し( 1 or 0が来る。)
 
     
     }while( z != 1);//1(終了)が入るまで、do-whileでループさせる。
@@ -43,7 +43,7 @@ int fibo(void){
 int end(void){
     
     int exit = 0; //意思を聞く関数
-    int go = 0; //do-while 脱出用変数
+    int go = 0; //do-while 抜ける用変数
     do{
         
         printf("exit? if you want, pless 1. you want replay, pless 0. \n");
