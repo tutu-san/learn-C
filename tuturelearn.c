@@ -6,8 +6,8 @@ int main(void){
         int a, b, c, d, i;
         a = 0;
         b = 1;
-        c = 0;
-        d = 0;
+        c = 0;//I—¹‚ğŠ|‚¯‚é‚½‚ß
+        d = 0; //‚¢‚í‚ä‚én€–Ú
 
         printf("Please input number\n");
         scanf("%d", &d);
