@@ -45,17 +45,17 @@ int end(void){
     int exit = 0; //意思を聞く関数
     int go = 0; //do-while 抜ける用変数
     do{
-        
+
         printf("exit? if you want, pless 1. you want replay, pless 0. \n");
         scanf("%d", &exit); //1か0を入れてもらう。
     
         if( exit == 0 || exit == 1){  //1か0が入っているか確認
-           int go = 1; //do-while から抜け出すために
+            go = 1; //do-while から抜け出すために
         }else{
             printf("error!\n"); //入力をやり直させる
         }      
 
-    }while(go == 1 );
+    }while(go != 1 );
     
     return exit; //main関数へ
 }
