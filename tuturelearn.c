@@ -28,13 +28,17 @@ int fibo(void){
 
     printf("Please input number\n"); //数値入力
     scanf("%d", &n);
-
-    for( i = 1; i < n; i++){  //計算
-        b = a + b;// A + B　で、第i項目の答えを出す.
-        a = b - a;// B - A で、(直前で)計算前の B を Aに入れる
+    if( n < 47){
+        for( i = 1; i < n; i++){  //計算
+            b = a + b;// A + B　で、第i項目の答えを出す.
+            a = b - a;// B - A で、(直前で)計算前の B を Aに入れる
+        }
+        printf(" result is  %d\n", b);//計算結果表示
+    }else{
+        printf("error!\n");
     }
 
-    printf(" result is  %d\n", b);//計算結果表示
+  
 
     return 0;//main関数へ
 }
