@@ -1,8 +1,13 @@
 #include <stdio.h>
 
 int main(void){
-    char str[32];
-    scanf("%32s", str);
-    printf(str);
+    int i;
+
+    char str[256];
+    scanf("%s", str);
+    for ( i = 0; str[i] != '\0'; i++);
+
+    printf("%d\n", i);
+
     return 0;
 }
