@@ -2,7 +2,7 @@
 
 int main(void){
     char str[32];
-    scanf("%s", str);
+    scanf("%32s", str);
     printf(str);
     return 0;
 }
