@@ -7,7 +7,7 @@ int main(void){
     data = array; //ポインタ変数に配列のアドレスを代入
 
     for (int i = 0; i < 10; i++){
-        average += data[i]; //配列みたいに使える。 array[i]って書いてるのとおなじ？
+        average += *(data + i); //ポインタ演算
     }
 
     printf("%d\n", average / 10);
