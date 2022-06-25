@@ -1,12 +1,17 @@
 #include <stdio.h>
 
-int main(void){
+void func(int *pvalue);
 
-    int *p;
-    int i;
-    p = &i;
-    *p = 10; //通常変数モードになったPに10をいれる
-    printf("*p = %d\n", *p);
-    printf("i = %d\n", i);
+int main(void){
+    int value = 10;
+    printf("&value = %p\n", &value);
+    func(&value); //funcの実引数にアドレスを渡す。
+    printf("value = %d\n", value);
     return 0;
+}
+
+void func(int *pvalue){
+    printf("pvalue = %p\n", pvalue); // pvalueのアドレスを見る.(valueと同じなはず。)
+    *pvalue = 100; //通常変数モードに切り替えて代入。
+    return;
 }
