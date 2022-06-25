@@ -1,16 +1,7 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(void){
-    char str1[256], str2[] = "DRAGONQUEST";
-
-    scanf("%s", str1);
-
-    if ( strcmp(str1, str2 ) == 0){
-        printf("ìØÇ∂\n");
-    }else{
-        printf("à·Ç§ÅI\n");
-    }
-
+    int i;
+    printf("%p\n", &i);
     return 0;
 }
