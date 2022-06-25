@@ -1,17 +1,20 @@
 #include <stdio.h>
 
-void func(int *pvalue);
+int getaverage( int data[10]);
 
 int main(void){
-    int value = 10;
-    printf("&value = %p\n", &value);
-    func(&value); //funcの実引数にアドレスを渡す。
-    printf("value = %d\n", value);
+
+    int average , array[10] = { 15, 78, 98, 15, 98,85, 17 ,35, 42, 15 };
+    average = getaverage(array); //配列名を送ることは、アドレスを送ること？
+    printf("%d\n", average);
     return 0;
 }
 
-void func(int *pvalue){
-    printf("pvalue = %p\n", pvalue); // pvalueのアドレスを見る.(valueと同じなはず。)
-    *pvalue = 100; //通常変数モードに切り替えて代入。
-    return;
+int getaverage(int data[10]){ 
+
+    int i, average = 0;
+    for (i = 0; i < 10; i++){
+        average += data[i];   //10この合計を出す。
+    }
+    return average / 10; //10で割って、平均値を返す。
 }
