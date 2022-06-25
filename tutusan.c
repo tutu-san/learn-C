@@ -4,7 +4,7 @@ int getaverage( int data[10]);
 
 int main(void){
 
-    int average , array[10] = { 15, 78, 98, 15, 98,85, 17 ,35, 42, 15 };
+    int average , array[5] = { 15, 78, 98, 15, 98 };
     average = getaverage(array); //配列名を送ることは、アドレスを送ること？
     printf("%d\n", average);
     return 0;
