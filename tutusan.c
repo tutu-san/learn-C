@@ -2,14 +2,15 @@
 
 int main(void){
     int *data;
-    int average = 0, array[10] = {15, 78, 98, 15, 98, 85, 17, 35, 42, 15};
+    int average = 0;
+    int array[10] = {15, 78, 98, 15, 98, 85, 17, 35, 42, 15};
 
-    data = array; //ポインタ変数に配列のアドレスを代入
-
-    for (int i = 0; i < 10; i++){
-        average += *(data + i); //ポインタ演算
+    for (data = array; data != &array[10]; data ++ ){ //配列のアドレスをdataに入れる。 そして、data内のアドレスを一つずつ増やす。
+        //ここに注目!
+        average += *data; // アドレスから、配列にアクセスしている？
     }
 
     printf("%d\n", average / 10);
+
     return 0;
 }
