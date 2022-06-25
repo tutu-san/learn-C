@@ -1,7 +1,10 @@
 #include <stdio.h>
 
 int main(void){
-    int i;
-    printf("%p\n", &i);
+    int array[10];
+    printf("array___(%p)\n", array);
+    printf("array[0](%p)\n", &array[0]);
+    printf("array[1](%p)\n", &array[1]);
+    printf("array[2](%p)\n", &array[2]);
     return 0;
 }
