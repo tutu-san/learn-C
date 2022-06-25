@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int getaverage( int *data);
+int getaverage( int data[]);
 
 int main(void){
 
@@ -12,7 +12,7 @@ int main(void){
     return 0;
 }
 
-int getaverage(int *data){ 
+int getaverage(int data[]){ 
 
     int i, average = 0;
     for (i = 0; i < 10; i++){
