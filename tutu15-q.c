@@ -18,6 +18,9 @@ int main(void){
 
     hantei(number, &min, &max); //&で、アドレスを送る
 
+    printf("%d\n", min);//結果表示
+    printf("%d\n", max);
+
     return 0;
 }
 
