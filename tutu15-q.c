@@ -18,7 +18,7 @@ int main(void){
         }
     }while( number[i - 1] != -1 );
 
-    degug = hantei(number, &min, &max); //&はいらない
+    degug = hantei(number, &min, &max); //&いる
 
     printf(" The min number is %d\n", min);//結果表示　通常変数モード
     printf(" The max number is %d\n", max);
