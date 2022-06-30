@@ -18,7 +18,7 @@ int main(void){
         }
     }while( number[i - 1] != -1 );
 
-    degug = hantei(number, &min, &max); //&いる
+    hantei(number, &min, &max); //&いる
 
     printf(" The min number is %d\n", min);//結果表示　通常変数モード
     printf(" The max number is %d\n", max);
@@ -35,5 +35,5 @@ int hantei(int number[], int *min, int *max){ //アドレスをもらうのでポインタ型 n
         }
         if(number[i] == -1) break; //ここだった。
     }
-    return *min;
+    return 0;
 }
