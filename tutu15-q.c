@@ -5,8 +5,9 @@ int hantei (int number[], int *min, int *max); //min max ポインタとして宣言
 int main(void){
     int i = 0;
     int number[9];
-    int min, max; //ここでは、ぽいんた変数にした
+    int min, max; 
     int degug;
+    min = 101; max = 0; // 0~100の範囲なので。
     do{
         printf("Please Input Number %d times\n", i + 1);
         scanf("%d",&number[i]);
@@ -19,8 +20,8 @@ int main(void){
 
     degug = hantei(number, &min, &max); //&はいらない
 
-    printf("%d\n", min);//結果表示　通常変数モード
-    printf("%d\n", max);
+    printf(" The min number is %d\n", min);//結果表示　通常変数モード
+    printf(" The max number is %d\n", max);
 
     return 0;
 }
@@ -29,10 +30,10 @@ int hantei(int number[], int *min, int *max){ //アドレスをもらうのでポインタ型 n
     
     for ( int i = 0; i < 10; i++){
         if(number[i] != -1){
-            if( number[i] < *min) number[i] = *min;
-            if( number[i] > *max) number[i] = *max;
+            if( number[i] < *min) *min = number[i];
+            if( number[i] > *max) *max = number[i];
         }
-        if(number[i] = -1) break;
+        if(number[i] == -1) break; //ここだった。
     }
-    return 0;
+    return *min;
 }
