@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-struct student{         //構造体タグは、関数よりも先に宣言する。
+struct student_tag{         //構造体タグは、関数よりも先に宣言する。
     int year;
     int clas;
     int number;
@@ -10,8 +10,10 @@ struct student{         //構造体タグは、関数よりも先に宣言する。
     double weight;
 };
 
+typedef struct student_tag student;  //student型を作れる。
+
 int main(void){
-    struct student data1, data2;
+    student data1, data2;
 
     data1.year = 3;
     data1.clas = 4;
