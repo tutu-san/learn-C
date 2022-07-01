@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct student{         //構造体タグは、関数よりも先に宣言する。
     int year;
@@ -14,6 +15,9 @@ int main(void){
 
     data.year = 10;
     printf("%d", data.year); //それぞれの要素には、"."で、アクセス。
+
+    strcpy(data.name, "MARIO");
+    printf("%d", data.name);
 
     return 0;
 }
