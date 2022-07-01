@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
-struct student_tag{         //構造体タグは、関数よりも先に宣言する。
+typedef struct{         //構造体タグを省略できる。//ここでstudent型を用意できるから。
     int year;
     int clas;
     int number;
     char name[64];
     double stature;
     double weight;
-};
+}student; //student型を宣言する.
 
-typedef struct student_tag student;  //student型を作れる。
+
+
 
 int main(void){
     student data1, data2;
