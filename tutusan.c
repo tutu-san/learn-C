@@ -11,5 +11,9 @@ struct student{         //構造体タグは、関数よりも先に宣言する。
 
 int main(void){
     struct student data;
+
+    data.year = 10;
+    printf("%d", data.year); //それぞれの要素には、"."で、アクセス。
+
     return 0;
 }
