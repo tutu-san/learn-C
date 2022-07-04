@@ -10,29 +10,19 @@ typedef struct{         //\‘¢‘Ìƒ^ƒO‚ğÈ—ª‚Å‚«‚éB//‚±‚±‚ÅstudentŒ^‚ğ—pˆÓ‚Å‚«‚é‚
     double weight;
 }student; //studentŒ^‚ğéŒ¾‚·‚é.
 
-
-
-
 int main(void){
-    student data1, data2;
+    student data;
+    student *pdata;
 
-    data1.year = 3;
-    data1.clas = 4;
-    data1.number = 18;
-    strcpy(data1.name, "MARIO");
-    data1.stature = 168.2;
-    data1.weight = 72.4;
+    printf("%d\n", data.year);
+    printf("%s\n", data.name); //‰½‚à‚È‚¢‚©‚çA‚¨‚©‚µ‚­‚È‚é‚æ‚ËB
 
-    data2 = data1; //data1‚Ì“à—e‚Ídata2‚ÖƒRƒs[
+    pdata = &data;
+    pdata->year = 10;
+    strcpy(pdata->name, "MARIO");  //  ->@‹L†!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    //data1&data2‚Ìî•ñ‘S•\¦
-    printf("data1.year = %d : data1.year = %d\n", data1.year, data2.year);
-    printf("data1.clas = %d : data2.clas = %d\n", data1.clas, data2.clas);
-    printf("data1.number = %d : data2.number = %d\n", data1.number, data2.number);
-    printf("data1.name = %s : data2.name %s\n", data1.name, data2.name);
-    printf("data1.stature = %f : data2.stature = %f\n", data1.stature, data2.stature);
-    printf("data1.weight = %f : data2.weight = %f", data1.weight, data2.weight);
-
+    printf("%d\n", data.year);
+    printf("%s\n", data.name);
 
     return 0;
 }
