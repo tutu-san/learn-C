@@ -10,19 +10,33 @@ typedef struct{         //\‘¢‘Ìƒ^ƒO‚ğÈ—ª‚Å‚«‚éB//‚±‚±‚ÅstudentŒ^‚ğ—pˆÓ‚Å‚«‚é‚
     double weight;
 }student; //studentŒ^‚ğéŒ¾‚·‚é.
 
+
+void student_print(student *data);
+
+
+
+
 int main(void){
     student data;
-    student *pdata;
 
-    printf("%d\n", data.year);
-    printf("%s\n", data.name); //‰½‚à‚È‚¢‚©‚çA‚¨‚©‚µ‚­‚È‚é‚æ‚ËB
+    data.year = 3;
+    data.clas = 4;
+    data.number = 18;
+    strcpy(data.name, "MARIO");
+    data.stature = 168.2;
+    data.weight = 72.4;
 
-    pdata = &data;
-    pdata->year = 10;
-    strcpy(pdata->name, "MARIO");  //  ->@‹L†!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-    printf("%d\n", data.year);
-    printf("%s\n", data.name);
+    student_print(&data); //ŒÄ‚Ño‚·B //ƒAƒhƒŒƒX‚ğ“n‚·B
 
     return 0;
+}
+
+void student_print(student *data){    //  ->@‹L†‚ÅƒAƒNƒZƒX‚Å‚«‚é‚æ
+    printf("[Šw”N]:%d\n", data->year);
+    printf("[ƒNƒ‰ƒX]:%d\n", data->clas);
+    printf("[”Ô†]:%d\n", data->number);
+    printf("[–¼‘O]:%s\n", data->name);
+    printf("[g’·]:%f\n", data->stature);
+    printf("[‘Ìd]:%f\n", data->weight);
+    return;
 }
